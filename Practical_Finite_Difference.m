@@ -8,7 +8,7 @@ h=1/n;
 e=ones(1,n)';
 A=spdiags([1*e -2*e 1*e], -1:1, n, n);
 D2=(1/h^2)*A;
-D2=full(D2);
+D2=full(D2); % Is this necessary
 
 D2(1,1)=1; %lhs of lower dirichlet BC
 D2(1,2)=0;
